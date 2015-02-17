@@ -9,9 +9,8 @@ How do we alter the tempo of a song to match another song?
 How can we shift the tempo without making it noticeable to the listener?
 
 #Resources
-
-[Echonest API]
-[Echonest Remix API]
+1. [Echonest API]
+2. [Echonest Remix API]
 
 ### 1. Mini-abstract and releveance of [Echonest API]
 
