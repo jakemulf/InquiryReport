@@ -5,6 +5,7 @@ We want to shift the tempo of a song to make a transition into another song
 #Question
 
 How do we alter the tempo of a song to match another song?
+
 How can we shift the tempo without making it noticeable to the listener?
 
 #Resources
