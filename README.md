@@ -29,7 +29,32 @@ The above commands will yield the tempo and time_signature of a song.
 
 ### 2. Mini-abstract and relevance of [Echonest Remix API]
 
-The Echonest Remix API is the API to alter a song.  Specifically for our case, it allows the beat of a song to be altered and matched to other songs.
+The Echonest Remix API contains methods to alter a song.  Specifically for our case, it allows the beat of a song to be altered.
+
+Example code taken from https://github.com/echonest/remix/blob/master/examples/stretch/simple_stretch.py
+
+```python
+import math
+import os
+import sys
+import dirac
+from echonest.remix import audio
+
+audiofile = audio.LocalAudioFile(input_filename)
+beats = audiofile.analysis.beats
+collect = []
+
+for beat in beats:
+  beat_audio = beat.render()
+  scaled_beat = dirac.timeScale(beat_audio.data, ratio)
+  ts = audio.AudioData(ndarray=scaled_beat, shape=scaled_beat.shape,
+      sampleRate=audiofile.sampleRate, numChannels=scaled_beat.shape[1])
+  collect.append(ts)
+  
+out = audio.assemble(collect, numChannels=2)
+out.encode(output_filename)
+```
+Using the audio and modify modules from echonest.remix, one can alter the time of a beat using the dirac.timeScale method.  Using this altered beat, you can re-apply the previous characteristics of the beat and make a new song out of these beats.
 
 ### 3. Mini-abstract and relevance of [Tempo change study]
 
