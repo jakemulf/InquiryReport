@@ -15,7 +15,7 @@ How can we shift the tempo without making it noticeable to the listener?
 
 ### 1. Mini-abstract and releveance of [Echonest API]
 
-The Ehonest API is an API for song related information.  It has methods that allow the user to get song information, and contains classes that allow a song to be altered.  Using the pyechonest.track module, you can find the tempo and time signature of the song.
+The Echonest API is an API for song related information.  It has methods that allow the user to get song information, and contains classes that allow a song to be altered.  Using the pyechonest.track module, you can find the tempo and time signature of the song.
 
 ```python
 import pyechonest.track as track
